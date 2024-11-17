@@ -17,7 +17,7 @@
         {
             get
             {
-                double total = (QntParticipante * CustoParticipante) * Duracao;
+                double total = QntParticipante * CustoParticipante;
 
                 return total;
             }
