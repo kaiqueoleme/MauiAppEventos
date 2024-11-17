@@ -4,9 +4,98 @@
              x:Class="MauiAppEventos.View.CadastroEvento"
              Title="CadastroEvento"
              NavigationPage.HasNavigationBar="False"
-             BackgroundColor="{StaticResource Secondary}">
-                
-    <VerticalStackLayout>
-        
-    </VerticalStackLayout>
+             BackgroundColor="{StaticResource Primary}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+            
+            <Image Source="evento.png" HeightRequest="100"/>
+
+            <Label Text="Cadastrar evento"
+                        FontSize="Large"
+                        HorizontalTextAlignment="Center"
+                        FontFamily="Roboto"
+                        FontAttributes="Bold"
+                        />
+
+            <Frame BackgroundColor="{StaticResource Secondary}">
+                <StackLayout Orientation="Vertical" Spacing="5">
+
+                    <Label Text="Nome do evento:"/>
+
+                    <Entry TextColor="{StaticResource PrimaryDarkText}"
+                           Background="{StaticResource PrimaryBrush}"
+                           x:Name="txt_evento"/>
+
+                    <Line X1="1" Y1="5"  
+                        X2="320" Y2="5"  
+                        Stroke="{StaticResource PrimaryBrush}"  
+                        StrokeThickness="2"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Data de Início" 
+                            HorizontalOptions="CenterAndExpand"/>
+
+                        <Label Text="Data de Término" 
+                            HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <DatePicker x:Name="dtpk_inicio"
+                                    Format="dd/MM/yyyy"
+                                    DateSelected="dtpk_inicio_DateSelected"
+                                    HorizontalOptions="CenterAndExpand"
+                                    TextColor="{StaticResource PrimaryDarkText}"/>
+
+                        <DatePicker x:Name="dtpk_termino"
+                                    Format="dd/MM/yyyy"
+                                    HorizontalOptions="CenterAndExpand"
+                                    TextColor="{StaticResource PrimaryDarkText}"/>
+                    </StackLayout>
+
+                    <Line X1="1" Y1="5"  
+                          X2="320" Y2="5"  
+                          Stroke="{StaticResource PrimaryBrush}"  
+                          StrokeThickness="2"/>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Label Text="Número de Participantes:" VerticalOptions="CenterAndExpand"/>
+                        <Entry x:Name="txt_nump"
+                               MaxLength="4"
+                               WidthRequest="58"
+                               FontSize="12"
+                               TextColor="{StaticResource SecondaryDarkText}"
+                               Placeholder="0000"/>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,-10,0,0">
+                        
+                        <Label Text="Custo por participante:" VerticalOptions="CenterAndExpand"/>
+                        
+                        <Entry x:Name="txt_custop" 
+                               MaxLength="4"
+                               WidthRequest="58"
+                               FontSize="12"
+                               TextColor="{StaticResource SecondaryDarkText}"
+                               Placeholder="0000"/>
+
+                    </StackLayout>
+
+                    <Line X1="1" Y1="5"  
+                        X2="320" Y2="5"  
+                        Stroke="{StaticResource PrimaryBrush}"  
+                        StrokeThickness="2"/>
+
+                    <Label Text="Local do evento:"/>
+                    <Entry x:Name="txt_local"
+                           TextColor="{StaticResource PrimaryDarkText}"
+                           Background="{StaticResource PrimaryBrush}"/>
+                </StackLayout>
+            </Frame>
+            
+            <Button Text="Concluir cadastro"
+                    Clicked="Button_Clicked"/>
+            
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

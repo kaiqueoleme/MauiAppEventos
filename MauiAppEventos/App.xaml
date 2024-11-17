@@ -9,6 +9,21 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource PrimaryDarkText}"/>
+            </Style>
+
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource SecondaryDarkText}"/>
+                <Setter Property="TextColor" Value="{StaticResource White}"/>
+                <Setter Property="HorizontalOptions" Value="Center"/>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="BorderColor" Value="Black"/>
+                <Setter Property="FontSize" Value="Small"/>
+                <Setter Property="CornerRadius" Value="20"/>
+                <Setter Property="Margin" Value="0,10,0,0"/>
+            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

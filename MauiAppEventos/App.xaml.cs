@@ -7,7 +7,7 @@ namespace MauiAppEventos
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new View.SelecionarTelas());
+            MainPage = new NavigationPage(new View.CadastroEvento());
         }
 
         protected override Window CreateWindow(IActivationState? activationState)
